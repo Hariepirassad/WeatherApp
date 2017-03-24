@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Weather App</title>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" src="openWeatherMap.js"></script>
+	</head>
+	<body background="background.png">
+		<div class="top-left">
+			<img id="logo" src="logo.png" />
+		</div>
+
+		<div class="weather-app">
+			<div class="left">
+				<div class="temperature"><span id="temperature"><%= data.temperature %></span>&deg;</div>
+				<div class="location"><span id="location"><%= data.location %></span></div>
+			</div>
+			<div class="right">
+				<div class="top">
+					<img id="icon" width="75px" src="<%= data.source %>.png" />
+				</div>
+				<div class="bottom">
+					<div class="humidity">
+						<img src="humidity.png" height="16px" />
+						<span id="humidity"><%= data.humidity %></span>%
+					</div>
+					<div class="wind">
+						<span id="wind"><%= data.wind %></span> Kts <span id="direction"><%= data.direction %></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="weather-data">
+			<form id ="data" method="post" action="/home">
+				<label for="url"><strong>Enter the coordinate name to forcast weather :</strong></label>
+				<input type="text" name="route" value="<%= coord.route %>"/>
+      	<input type="submit" style="border-radius:9px" value="Forcast Weather"/>
+    	</form>
+		</div>
+
+		<!-- <div class="display-data">
+				<p><strong>Point: </strong><%=  %></p>
+      	<p><strong>Location: </strong><%=  %></p>
+				<p><strong>Temperature: </strong><%=  %><strong>°C </strong></p>
+				<p><strong>Wind: </strong><%=  %><strong>Kts </strong></p>
+				<p><strong>Direction: </strong><%=  %><%=  %></p>
+				<p><strong>Humidity: </strong><%=  %><strong>% </strong></p>
+		</div> -->
+
+	</body>
+</html>

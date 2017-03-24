@@ -1,0 +1,14 @@
+{
+    "title": "Schema OWM",
+    "type": "object",
+    "properties": {
+        "lat": "integer",
+        "lon": "integer",
+        "temperature": "integer",
+        "location": "string",
+        "icon":"string",
+        "humidity":"integer",
+        "wind":"integer",
+        "direction":"string"
+    }
+}

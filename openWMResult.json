@@ -1,0 +1,14 @@
+{
+    "title": "Schema OWM",
+    "type": "object",
+    "properties": {
+        "lat": 36.8336111,
+        "lon": 8.65,
+        "temperature": 20,
+        "location": "Tabarka",
+        "icon": 801,
+        "humidity": 43,
+        "wind": 4,
+        "direction": "SE"
+    }
+}

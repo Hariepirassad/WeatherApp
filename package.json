@@ -1,0 +1,13 @@
+{
+  "name": "node-weatherApp",
+  "version": "0.0.1",
+  "description": "Weather App",
+  "main": "app.js",
+  "author": "Harry",
+  "dependencies": {
+    "cheerio": "latest",
+    "ejs": "^2.5.6",
+    "express": "latest",
+    "request": "latest"
+  }
+}
