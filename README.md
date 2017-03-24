@@ -1,6 +1,6 @@
 # WeatherApp
 
-> Explination about the web app :
+## What it does
 
 Give the weather all over the world. 
 You juste need to know the route name into the database: 
@@ -12,6 +12,11 @@ You juste need to know the route name into the database:
 -  BJA
 -  BNA
 -  DAAG
+
+Now just launch weatherApp.js with node and see the weather.
+'''
+node weatherApp
+'''
 
 ## What to do
 
