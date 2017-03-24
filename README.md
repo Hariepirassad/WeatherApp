@@ -3,7 +3,7 @@
 ## What it does
 
 Give the weather all over the world. 
-You just need to know the route name into the database: 
+You just need to know the route name incorporated into the database.  
 -  DTTA
 -  KEMIR
 -  MORJA
