@@ -22,7 +22,8 @@ node weatherApp
 
 Run the following command in your directory to install all the modules needed.
 You will need [Node.js](https://nodejs.org/en/) to run the application.
-```npm install
+```
+npm install
 npm install mysql
 ```
 
