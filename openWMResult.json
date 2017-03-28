@@ -2,14 +2,14 @@
     "title": "Schema OWM",
     "type": "object",
     "properties": {
-        "coordName": "LFPG",
-        "lat": 49.0016667,
-        "lon": 2.535833333333333,
-        "temperature": 12,
-        "location": "Roissy-en-France",
-        "icon": 801,
-        "humidity": 66,
+        "coordName": "DTTA",
+        "lat": 36.8352778,
+        "lon": 10.235277777777776,
+        "temperature": 11,
+        "location": "El Aouina",
+        "icon": 803,
+        "humidity": 87,
         "wind": 2,
-        "direction": "WSW"
+        "direction": "WNW"
     }
 }
