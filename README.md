@@ -25,7 +25,17 @@ You will need [Node.js](https://nodejs.org/en/) to run the application.
 ```
 npm install
 npm install mysql
+npm install mongodb
 ```
+
+You also need to get you own google MAPS API KEY on google console and add it to weatherForecast.ejs and getWeatherDB.ejs:
+```
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    async defer></script>
+```
+
+## Warning
+Get only the weather from the ROUTES that you've already forecasted, other way there is no weather data into the database so the app could crash.
 
 ## Licence
 
