@@ -2,6 +2,7 @@
     "title": "Schema OWM",
     "type": "object",
     "properties": {
+        "coordName":"string",
         "lat": "integer",
         "lon": "integer",
         "temperature": "integer",

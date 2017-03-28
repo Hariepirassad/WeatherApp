@@ -6,12 +6,13 @@ var dataOpenWM = require('./schemaOpenWM.json');
 
 var OWM = function(resultSQL, callback){
 
-  var Lat = resultSQL.lat;
-  var Lon = resultSQL.lon;
+  var coordName = resultSQL.coordName;
+  var lat = resultSQL.lat;
+  var lon = resultSQL.lon;
 
   var url = "http://api.openweathermap.org/data/2.5/weather?" +
-    "lat=" + Lat +
-  	"&lon=" + Lon +
+    "lat=" + lat +
+  	"&lon=" + lon +
   	"&APPID=" + APPID;
 
   request(url, function(error, response, body){
@@ -21,8 +22,9 @@ var OWM = function(resultSQL, callback){
       var $ = cheerio.load(body);
       console.log(body);
       var dataOWM = JSON.parse(body);
-      dataOpenWM.properties.lat = Lat;
-      dataOpenWM.properties.lon = Lon;
+      dataOpenWM.properties.coordName = coordName;
+      dataOpenWM.properties.lat = lat;
+      dataOpenWM.properties.lon = lon;
       dataOpenWM.properties.icon = dataOWM.weather[0].id;
       dataOpenWM.properties.humidity = dataOWM.main.humidity;
       dataOpenWM.properties.wind = M2K(dataOWM.wind.speed);

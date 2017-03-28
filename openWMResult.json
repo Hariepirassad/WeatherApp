@@ -2,13 +2,14 @@
     "title": "Schema OWM",
     "type": "object",
     "properties": {
-        "lat": 36.8336111,
-        "lon": 8.65,
-        "temperature": 20,
-        "location": "Tabarka",
+        "coordName": "LFPG",
+        "lat": 49.0016667,
+        "lon": 2.535833333333333,
+        "temperature": 12,
+        "location": "Roissy-en-France",
         "icon": 801,
-        "humidity": 43,
-        "wind": 4,
-        "direction": "SE"
+        "humidity": 66,
+        "wind": 2,
+        "direction": "WSW"
     }
 }

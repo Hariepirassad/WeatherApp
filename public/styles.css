@@ -1,3 +1,72 @@
+#nav
+{
+   margin:0;
+   padding:0;
+   text-align: center;
+   background:#125293 url('nav_bg.jpg') 0 0 repeat-x;
+   width:100%;
+   border:1px solid #42432d;
+   border-width:1px 0;
+}
+
+#nav li
+{
+   display:inline;
+   padding:0;
+   margin:0;
+}
+
+#nav a:link, #nav a:visited
+{
+   color:#000;
+   background:#284797;
+   padding:5px 40px 4px 10px;
+   width:auto;
+   border-right:1px solid #42432d;
+   text-decoration:none;
+   font:bold 1em/1em Arial, Helvetica, sans-serif;
+   text-transform:uppercase;
+   text-shadow: 2px 2px 2px #555;
+}
+
+#nav li:first-child a
+{
+   border-left:1px solid #42432d;
+}
+
+#nav a:hover
+{
+   color:#fff;
+   background:#727454;
+}
+
+#home #nav-home a, #forecast #nav-forecast a, #getWeather #nav-getWeather a
+{
+  background:#e35a00;
+  color:#fff;
+  text-shadow:none;
+}
+
+#home #nav-home a:hover, #forecast #nav-forecast a:hover, #getWeather #nav-getWeather a:hover
+{
+  background:#e35a00;
+}
+
+#nav a:active
+{
+   background:#e35a00;
+   color:#fff;
+}
+
+#map {
+  margin-top: 20px;
+  height: 320px;
+}
+
+.nav-bar{
+  text-align:center;
+}
+
 .top-left img {
     width: 300px;
     height: 160px;
@@ -6,6 +75,7 @@
 
 .weather-app {
     margin: auto;
+    margin-top: 20px;
     width: 300px;
     height: 160px;
     border: 1px solid black;
@@ -71,15 +141,35 @@
 }
 
 .weather-data{
-  margin-top: 30px;
+  margin-top: 20px;
   text-align:center;
 }
 
 
 .display-data{
   margin: auto;
+  margin-top: 20px;
   width: 300px;
   height: 230px;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 10px 10px 50px #888888;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Mono";
+  background: #cec;
+}
+
+.get-weather-data{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.display-routes{
+  margin: auto;
+  margin-top: 20px;
+  width: 300px;
+  height: 660px;
   border: 1px solid black;
   border-radius: 20px;
   box-shadow: 10px 10px 50px #888888;

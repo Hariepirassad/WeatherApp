@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Weather App</title>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+	</head>
+	<body background="background.png">
+
+		<div class="top-left">
+			<img id="logo" src="logo.png" />
+		</div>
+
+		<ul id="nav">
+   		<li id="nav-home"><a href="/home">Home</a></li>
+   		<li id="nav-forecast"><a href="/weatherForecast">Forecast Weather</a></li>
+   		<li id="nav-getWeather"><a href="getWeatherDB">Get weather from DB</a></li>
+		</ul>
+
+    <div class="get-weather-data">
+			<form id ="data" method="post" action="/getWeatherDB">
+				<label for="url"><strong>Enter the coordinate name to get weather information from the DataBase :</strong></label>
+				<input type="text" style="border-radius:9px" name="route" value="<%= coord.route %>"/>
+      	<input type="submit" style="border-radius:9px" value="Get weather"/>
+    	</form>
+		</div>
+
+    <div class="display-data">
+				<p><strong>Point: </strong><%= data.coordName %></p>
+      	<p><strong>Location: </strong><%= data.location %></p>
+				<p><strong>Temperature: </strong><%= data.temperature %><strong>°C </strong></p>
+				<p><strong>Wind: </strong><%= data.wind %><strong>Kts </strong></p>
+				<p><strong>Direction: </strong><%= data.direction %><%=  %></p>
+				<p><strong>Humidity: </strong><%= data.humidity %><strong>% </strong></p>
+		</div>
+
+		<div id="map"></div>
+     <script type="text/javascript">
+
+      var map;
+      function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: <%= data.latitude %>, lng: <%= data.longitude %>},
+          zoom: 8
+        });
+
+
+		  	var beachMarker = new google.maps.Marker({
+		    	position: {lat: <%= data.latitude %>, lng: <%= data.longitude %>},
+		    	map: map
+		  	});
+      }
+
+     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtWQR5Ac5DnQSH8hH74blsy9lMlHCOL_0&callback=initMap"
+    async defer></script>
+
+	</body>
+</html>

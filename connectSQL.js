@@ -1,6 +1,7 @@
 var mysql = require('mysql');
 
 var coord = {
+  coordName: "",
   lat: 0,
   lon: 0
 }
@@ -24,7 +25,7 @@ function connectSQL(coordName, callback){
     console.log('connected as id ' + mySqlClient.threadId);
   });
 
-  var selectQuery = 'select DDLat, DDLon from coordinates where coordName =' + '\'' + coordName + '\';'
+  var selectQuery = 'select DDLat, DDLon, coordName from coordinates where coordName =' + '\'' + coordName + '\';'
 
   mySqlClient.query(selectQuery, function select(error, results, fields) {
     if (error) {
@@ -33,6 +34,7 @@ function connectSQL(coordName, callback){
     }
     if (results.length > 0) {
      	var firstResult = results[0] ;
+      coord.coordName = firstResult['coordName'];
   		coord.lat = firstResult['DDLat'];
   		coord.lon = firstResult['DDLon'];
       callback && callback(coord);
