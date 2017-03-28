@@ -28,7 +28,9 @@ npm install mysql
 npm install mongodb
 ```
 
-You also need to get you own google MAPS API KEY on google console and add it to weatherForecast.ejs and getWeatherDB.ejs
+We use a NoSQL database (MongoDB) so you need to create a database called 'COMPANIES' and a collection called 'weather' 
+
+Finally you also need to get you own google MAPS API KEY on google console and add it to weatherForecast.ejs and getWeatherDB.ejs
 ```
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
     async defer></script>
